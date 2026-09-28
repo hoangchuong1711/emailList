@@ -15,3 +15,7 @@ RUN sed -i 's/port="8080"/port="${PORT:-10000}"/' /usr/local/tomcat/conf/server.
 
 # Deploy the WAR at the domain root instead of /sql-gateway.
 COPY --from=build /workspace/target/sql-gateway.war /usr/local/tomcat/webapps/ROOT.war
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
