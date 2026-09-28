@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+    <Resource
+            name="jdbc/email_list_db"
+            auth="Container"
+
+            type="javax.sql.DataSource"
+
+            driverClassName="com.mysql.cj.jdbc.Driver"
+
+            url="jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?sslMode=REQUIRED"
+
+            username="${DB_USERNAME}"
+            password="${DB_PASSWORD}"
+
+            initialSize="3"
+            maxTotal="10"
+            minIdle="2"
+            maxIdle="5"
+            maxWaitMillis="10000"
+
+            testOnBorrow="true"
+            validationQuery="SELECT 1"
+    />
+
+</Context>

@@ -1,0 +1,8 @@
+.git
+.idea
+.smarttomcat
+.agents
+target
+*.iml
+.env
+.env.*
